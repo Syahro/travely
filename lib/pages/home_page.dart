@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:travely/theme.dart';
+import 'package:travely/widget/floating_button.dart';
 import 'package:travely/widget/recomended_card.dart';
 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingButton(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: SafeArea(
         child: ListView(
           children: [
@@ -425,7 +428,10 @@ class HomePage extends StatelessWidget {
                         ),
                       ],
                     ),
-                  )
+                  ),
+                  SizedBox(
+                    height: 70,
+                  ),
                 ],
               ),
             ),
