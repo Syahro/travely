@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travely/pages/detail_page.dart';
 import 'package:travely/theme.dart';
 import 'package:travely/widget/floating_button.dart';
 import 'package:travely/widget/recomended_card.dart';
@@ -106,112 +107,121 @@ class HomePage extends StatelessWidget {
                   SizedBox(
                     height: 20,
                   ),
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(20),
-                    child: Container(
-                      height: 200,
-                      width: MediaQuery.of(context).size.width -
-                          (2 * defaultMargin),
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage('assets/destination1.jpg'),
-                          fit: BoxFit.cover,
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return DetailPage();
+                      }));
+                    },
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Container(
+                        height: 200,
+                        width: MediaQuery.of(context).size.width -
+                            (2 * defaultMargin),
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage('assets/destination1.jpg'),
+                            fit: BoxFit.cover,
+                          ),
                         ),
-                      ),
-                      child: Padding(
-                        padding: EdgeInsets.all(23),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Container(
-                                  height: 25,
-                                  width: 45,
-                                  decoration: BoxDecoration(
-                                    color: Colors.black.withOpacity(0.1),
-                                    borderRadius: BorderRadius.circular(15),
-                                  ),
-                                  child: Padding(
-                                    padding: EdgeInsets.only(right: 4),
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Icon(
-                                          Icons.military_tech,
-                                          color: Colors.amber,
-                                          size: 20,
-                                        ),
-                                        Text(
-                                          '1',
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.w600,
-                                            color: Colors.white,
+                        child: Padding(
+                          padding: EdgeInsets.all(23),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Container(
+                                    height: 25,
+                                    width: 45,
+                                    decoration: BoxDecoration(
+                                      color: Colors.black.withOpacity(0.1),
+                                      borderRadius: BorderRadius.circular(15),
+                                    ),
+                                    child: Padding(
+                                      padding: EdgeInsets.only(right: 4),
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Icon(
+                                            Icons.military_tech,
+                                            color: Colors.amber,
+                                            size: 20,
                                           ),
-                                        )
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                                Container(
-                                  width: 25,
-                                  height: 25,
-                                  decoration: BoxDecoration(
-                                    color: Colors.black.withOpacity(0.1),
-                                    borderRadius: BorderRadius.circular(20),
-                                  ),
-                                  child: Icon(
-                                    Icons.bookmark,
-                                    color: Colors.white,
-                                    size: 17,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.only(
-                                    left: 2,
-                                  ),
-                                  child: Text(
-                                    'Labuhanbajo Beach',
-                                    style: TextStyle(
-                                      fontSize: 20,
-                                      color: whiteColor,
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 2,
-                                ),
-                                Row(
-                                  children: [
-                                    Icon(
-                                      Icons.location_on,
-                                      color: whiteColor,
-                                      size: 12,
-                                    ),
-                                    SizedBox(
-                                      width: 2,
-                                    ),
-                                    Text(
-                                      'Labuhanbajo - Indonesia',
-                                      style: TextStyle(
-                                        fontSize: 13,
-                                        color: whiteColor,
+                                          Text(
+                                            '1',
+                                            style: TextStyle(
+                                              fontSize: 15,
+                                              fontWeight: FontWeight.w600,
+                                              color: Colors.white,
+                                            ),
+                                          )
+                                        ],
                                       ),
-                                    )
-                                  ],
-                                )
-                              ],
-                            )
-                          ],
+                                    ),
+                                  ),
+                                  Container(
+                                    width: 25,
+                                    height: 25,
+                                    decoration: BoxDecoration(
+                                      color: Colors.black.withOpacity(0.1),
+                                      borderRadius: BorderRadius.circular(20),
+                                    ),
+                                    child: Icon(
+                                      Icons.bookmark,
+                                      color: Colors.white,
+                                      size: 17,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsets.only(
+                                      left: 2,
+                                    ),
+                                    child: Text(
+                                      'Labuhanbajo Beach',
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        color: whiteColor,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 2,
+                                  ),
+                                  Row(
+                                    children: [
+                                      Icon(
+                                        Icons.location_on,
+                                        color: whiteColor,
+                                        size: 12,
+                                      ),
+                                      SizedBox(
+                                        width: 2,
+                                      ),
+                                      Text(
+                                        'Labuhanbajo - Indonesia',
+                                        style: TextStyle(
+                                          fontSize: 13,
+                                          color: whiteColor,
+                                        ),
+                                      )
+                                    ],
+                                  )
+                                ],
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ),
