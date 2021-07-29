@@ -1,42 +1,53 @@
 import 'package:flutter/material.dart';
 import 'package:travely/theme.dart';
+import 'package:travely/widget/icon_bottom.dart';
+
+import '../theme.dart';
+import '../theme.dart';
+import '../theme.dart';
+import '../theme.dart';
+import '../theme.dart';
+import '../theme.dart';
 
 class FloatingButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 68,
+      height: 101,
       width: double.infinity,
-      decoration: BoxDecoration(color: whiteColor, boxShadow: [
-        BoxShadow(
-          color: Colors.black.withOpacity(0.1),
-          blurRadius: 1,
-          spreadRadius: 1,
-          offset: Offset(0, 0),
-        )
-      ]),
+      decoration: BoxDecoration(
+        color: whiteColor,
+        boxShadow: [
+          BoxShadow(
+            color: greyColor.withOpacity(0.2),
+            blurRadius: 1,
+            spreadRadius: 1,
+            offset: Offset(2, 0),
+          )
+        ],
+      ),
       child: Padding(
-        padding: EdgeInsets.fromLTRB(35, 22, 35, 22),
+        padding: EdgeInsets.fromLTRB(45, 35, 45, 26),
         child: Column(
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Icon(
-                  Icons.home,
-                  color: Colors.black.withOpacity(0.7),
+                IconBottom(
+                  imageUrl: 'assets/home.png',
+                  isActive: true,
                 ),
-                Icon(
-                  Icons.explore,
-                  color: Colors.black.withOpacity(0.3),
+                IconBottom(
+                  imageUrl: 'assets/compas.png',
+                  isActive: false,
                 ),
-                Icon(
-                  Icons.bookmark,
-                  color: Colors.black.withOpacity(0.3),
+                IconBottom(
+                  imageUrl: 'assets/bookmark_outline.png',
+                  isActive: false,
                 ),
-                Icon(
-                  Icons.person,
-                  color: Colors.black.withOpacity(0.3),
+                IconBottom(
+                  imageUrl: 'assets/user.png',
+                  isActive: false,
                 ),
               ],
             ),

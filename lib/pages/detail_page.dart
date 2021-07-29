@@ -1,6 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:travely/theme.dart';
 import 'package:travely/widget/floating_button_detail.dart';
+import 'package:travely/widget/information.dart';
+
+import '../theme.dart';
+import '../theme.dart';
+import '../theme.dart';
+import '../theme.dart';
+import '../theme.dart';
+import '../theme.dart';
+import '../theme.dart';
+import '../theme.dart';
+import '../theme.dart';
+import '../theme.dart';
 
 class DetailPage extends StatelessWidget {
   @override
@@ -52,7 +64,7 @@ class DetailPage extends StatelessWidget {
                         ],
                       ),
                       SizedBox(
-                        height: 25,
+                        height: 33,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -62,86 +74,57 @@ class DetailPage extends StatelessWidget {
                             child: Text(
                               'Labuhanbajo Beach',
                               style: TextStyle(
-                                fontSize: 22,
-                                fontWeight: FontWeight.w500,
-                                color: blackColor.withOpacity(0.8),
+                                fontSize: 24,
+                                fontWeight: FontWeight.w600,
+                                color: blackColor,
                               ),
                             ),
                           ),
                           Text(
                             '\$260',
                             style: TextStyle(
-                              fontSize: 22,
-                              fontWeight: FontWeight.w500,
-                              color: blackColor.withOpacity(0.8),
+                              fontSize: 24,
+                              fontWeight: FontWeight.w600,
+                              color: blackColor,
                             ),
                           ),
                         ],
                       ),
                       SizedBox(
-                        height: 3,
+                        height: 8,
                       ),
                       Row(
                         children: [
-                          Icon(
-                            Icons.location_on,
-                            size: 17,
-                            color: Colors.grey.withOpacity(0.7),
+                          Image.asset(
+                            'assets/location.png',
+                            width: 13,
+                            height: 15,
+                            color: darkGreyColor,
                           ),
                           SizedBox(
-                            width: 3,
+                            width: 8,
                           ),
                           Text(
-                            'Nusa Tenggara Barat - Indonesia',
+                            'Bali, Indonesia',
                             style: TextStyle(
-                                fontSize: 14,
-                                color: Colors.grey.withOpacity(0.7)),
+                              fontSize: 18,
+                              fontWeight: FontWeight.w600,
+                              color: darkGreyColor,
+                            ),
                           )
                         ],
                       ),
                       SizedBox(
-                        height: 20,
+                        height: 40,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.only(right: 5),
-                                child: Row(
-                                  children: [
-                                    Icon(
-                                      Icons.star,
-                                      color: Colors.amber,
-                                      size: 18,
-                                    ),
-                                    SizedBox(
-                                      width: 5,
-                                    ),
-                                    Text(
-                                      '4.8',
-                                      style: TextStyle(
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w600,
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              ),
-                              SizedBox(
-                                height: 3,
-                              ),
-                              Text(
-                                '2k reviews',
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  color: Colors.grey.withOpacity(0.8),
-                                ),
-                                textAlign: TextAlign.center,
-                              )
-                            ],
+                          Information(
+                            imageUrl: 'assets/star.png',
+                            info: '4.8',
+                            noted: '2k reviews',
+                            isDegrees: false,
                           ),
                           Container(
                             width: 1,
@@ -151,39 +134,11 @@ class DetailPage extends StatelessWidget {
                               borderRadius: BorderRadius.circular(10),
                             ),
                           ),
-                          Column(
-                            children: [
-                              Row(
-                                children: [
-                                  Icon(
-                                    Icons.schedule,
-                                    color: Colors.orange,
-                                    size: 18,
-                                  ),
-                                  SizedBox(
-                                    width: 5,
-                                  ),
-                                  Text(
-                                    '3h',
-                                    style: TextStyle(
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.w600,
-                                    ),
-                                  )
-                                ],
-                              ),
-                              SizedBox(
-                                height: 3,
-                              ),
-                              Text(
-                                'Duration',
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  color: Colors.grey.withOpacity(0.8),
-                                ),
-                                textAlign: TextAlign.center,
-                              )
-                            ],
+                          Information(
+                            imageUrl: 'assets/clock.png',
+                            info: '3h',
+                            noted: 'Duration',
+                            isDegrees: false,
                           ),
                           Container(
                             width: 1,
@@ -193,82 +148,37 @@ class DetailPage extends StatelessWidget {
                               borderRadius: BorderRadius.circular(10),
                             ),
                           ),
-                          Column(
-                            children: [
-                              Row(
-                                children: [
-                                  Icon(
-                                    Icons.cloud,
-                                    color: Colors.blue,
-                                    size: 18,
-                                  ),
-                                  SizedBox(
-                                    width: 5,
-                                  ),
-                                  Text(
-                                    '28',
-                                    style: TextStyle(
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.w600,
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsets.only(bottom: 6),
-                                    child: Text(
-                                      'o',
-                                      style: TextStyle(
-                                        fontSize: 9,
-                                        fontWeight: FontWeight.w600,
-                                      ),
-                                      textDirection: TextDirection.ltr,
-                                    ),
-                                  ),
-                                  Text(
-                                    'C',
-                                    style: TextStyle(
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.w600,
-                                    ),
-                                  )
-                                ],
-                              ),
-                              SizedBox(
-                                height: 3,
-                              ),
-                              Text(
-                                'Sunny',
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  color: Colors.grey.withOpacity(0.8),
-                                ),
-                                textAlign: TextAlign.center,
-                              )
-                            ],
-                          )
+                          Information(
+                            imageUrl: 'assets/cloud.png',
+                            info: '28',
+                            noted: 'Sunny',
+                            isDegrees: true,
+                          ),
                         ],
                       ),
                       SizedBox(
-                        height: 20,
+                        height: 40,
                       ),
                       Text(
                         'Description',
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w500,
-                          color: blackColor.withOpacity(0.8),
+                        style: styleText.copyWith(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                          color: blackColor,
                         ),
                       ),
                       SizedBox(
-                        height: 20,
+                        height: 13,
                       ),
                       Text(
-                        'Labuhanbajo Beach is one of the most famous spot of\nWest Southeast Nusa. Major travel sites use its photo to advertise West Southeast Nusa and even sometimes Indonesia.',
-                        style: TextStyle(
-                          color: Colors.grey.withOpacity(0.7),
-                        ),
-                      ),
+                          'Kelingking Beach is one of the most famous spot of Bali. Major travel sites use its photo to advertise Bali and even sometimes Indonesia. The place is indeed very spectacular and really amazing. The rock of Kelingking Beach looks a little like the backbone of a dinosaur that would drink in the sea.',
+                          style: styleText.copyWith(
+                            fontSize: 16,
+                            color: darkGreyColor,
+                            fontWeight: FontWeight.w600,
+                          )),
                       SizedBox(
-                        height: 50,
+                        height: 130,
                       )
                     ],
                   ),
@@ -286,32 +196,34 @@ class DetailPage extends StatelessWidget {
                     Navigator.pop(context);
                   },
                   child: Container(
-                    height: 40,
-                    width: 40,
-                    decoration: BoxDecoration(
-                      color: Colors.black.withOpacity(0.2),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Icon(
-                      Icons.chevron_left,
-                      size: 28,
-                      color: Colors.white.withOpacity(0.7),
-                    ),
-                  ),
+                      height: 54,
+                      width: 54,
+                      decoration: BoxDecoration(
+                        color: Color(0XFFADB0B2).withOpacity(0.7),
+                        borderRadius: BorderRadius.circular(27),
+                      ),
+                      child: Center(
+                        child: Image.asset(
+                          'assets/back.png',
+                          width: 28,
+                          height: 14,
+                        ),
+                      )),
                 ),
                 Container(
-                  height: 40,
-                  width: 40,
-                  decoration: BoxDecoration(
-                    color: Colors.black.withOpacity(0.2),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Icon(
-                    Icons.share,
-                    size: 20,
-                    color: Colors.white.withOpacity(0.7),
-                  ),
-                )
+                    height: 54,
+                    width: 54,
+                    decoration: BoxDecoration(
+                      color: Color(0XFFADB0B2).withOpacity(0.7),
+                      borderRadius: BorderRadius.circular(27),
+                    ),
+                    child: Center(
+                      child: Image.asset(
+                        'assets/share.png',
+                        width: 17,
+                        height: 20,
+                      ),
+                    ))
               ],
             ),
           )
